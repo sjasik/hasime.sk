@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/slider.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"></script>
+
+  <title>HASIME.SK - Moderný zvolávací systém</title>
+</head>
+
+<body>
+  <div id="mainwrapper" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="container column">
+          <div class="links">
+            <div class="animate-nav"><a href="#"><img src="/images/android-24px.svg"> Stiahnuť apku</a></div>
+            <div class="animate-nav"><a href="https://panel.hasime.sk/login" target="_blank"
+                rel="noopener noreferrer">Prihlásiť sa</a></div>
+            <div class="animate-nav"><a href="https://panel.hasime.sk/register" target="_blank"
+                rel="noopener noreferrer">Vytvoriť úcet</a></div>
+          </div>
+          <div class="logo animate-hero-text">
+            <img src="/images/logo.svg" alt="" srcset="">
+          </div>
+          <div class="hero-text">
+            <h6 class="animate-hero-text">HASIME.SK - Moderný zvolávací systém</h6>
+            <h1 class="animate-hero-text">Zefektívnite zvolávanie<br>svojich členov</h1>
+            <a href="https://panel.hasime.sk/register">
+              <div class="animate-hero-text" style="display: inline-flex; margin-top: 24px;">
+                <h2>Mám záujem</h2>
+                <span>></span>
+                <span>></span>
+              </div>
+            </a>
+            <p class="animate-hero-text">30 dní skúšobná doba zdarma,<br>potom len 8€ na mesiac (pri platbe na rok)</p>
+          </div>
+          <div class="footer animate-footer">
+            <span>Používaním stránok hasime.sk súhlasíte<br>s <a href="podmienky.html">podmienkami používania</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container column" style="padding-top: 32px;">
+          <div class="storyline animate-feature">
+            <div class="storyline-header">
+              <!-- <h6 class="storyline-title">storyline</h6> -->
+            </div>
+            <div class="storyline-slider">
+              <div class="storyline-slide">
+                <img src="/images/slider/app.png" alt="" class="storyline-image">
+              </div>
+              <div class="storyline-slide">
+                <img src="/images/slider/app_with_keyboard.png" alt="" class="storyline-image">
+              </div>
+              <div class="storyline-slide">
+                <img src="/images/slider/dashboard.png" alt="" class="storyline-image">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col features animate-feature">
+              <div id="feature1">
+                <img src="/images/campaign-24px.svg" alt="" srcset="">
+                <h3>Zabudnite na ľahko prehliadnuteľné SMSky</h3>
+                <p>Hlasité upozornenie zobrazíme, aj keď je mobilný telefón zablokovaný a v tichom režime (telefón musí
+                  mať prístup na internet)</p>
+              </div>
+              <div id="feature2">
+                <img src="/images/chat-24px.svg" alt="" srcset="">
+                <h3>Získajte lepší prehľad</h3>
+                <p>Členovia môžu na upozornenie ihneď odpovedať (prídem/neprídem), prípadne možu priložiť vlastnú
+                  správu, vy tak budete presne vedieť kto sa zúčastní a kto nie</p>
+              </div>
+              <div id="feature3">
+                <img src="/images/public-24px.svg" alt="" srcset="">
+                <h3>Jednoduché ovládanie, bez investícií, kdekoľvek</h3>
+                <p>Administrácia cez webovú aplikáciu, stačí vám starší počítač prípadne tablet</p>
+              </div>
+            </div>
+          </div>
+          <div class="row footer-mobile animate-footer">
+            <div class="col">
+              <div>
+                <span>Používaním stránok hasime.sk súhlasíte<br>s <a href="podmienky.html">podmienkami
+                    používania</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("mainwrapper").style.display = "block";
+    const tl1 = gsap.timeline();
+    const tl2 = gsap.timeline();
+    const tl3 = gsap.timeline();
+    const tl4 = gsap.timeline();
+    tl1.from(".animate-nav", { delay: 0, duration: 2, y: -150, opacity: 0, ease: Expo.easeOut, stagger: 0.1 });
+    tl2.from(".animate-hero-text", { delay: 0.25, duration: 2, y: 32, opacity: 0, ease: Expo.easeOut, stagger: 0.1 });
+    tl3.from(".animate-feature", { delay: 0.5, duration: 2, y: 32, opacity: 0, ease: Expo.easeOut, stagger: 0.1 });
+    tl4.from(".animate-footer", { delay: 0.75, duration: 2, opacity: 0, ease: Expo.easeOut, stagger: 0.1 });
+  </script>
+
+  <script src="/js/slider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

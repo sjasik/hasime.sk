@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.column {
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.links {
+    padding-top: 32px;
+    display: inline-block;
+}
+
+.links div{
+    display: inline-block;
+}
+
+.links a {
+    text-decoration: none !important;
+    color: #0E0D10; /*Woodsmoke*/
+    /* color: #CFD5D9; Iron */
+    /* color: #276CF6; Dodger blue */
+    margin-right: 16px;
+    font-weight: 500;
+    transition: ease 0.25s;
+}
+
+.links a:hover {
+    color: #276CF6;
+}
+
+.logo {
+    width: 32px;
+    margin-top: 32px;
+}
+
+.hero-text {
+    margin-top: 32px;
+}
+
+.hero-text h1 {
+    margin-top: 24px;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.hero-text h2 {
+    color: #276CF6;
+    font-weight: 700;
+}
+
+.hero-text p {
+    margin-top: 16px;
+}
+
+@keyframes arrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate3d(-6px, 0px, 0px);
+    }
+    40% {
+        transform: translate3d(1px, 0px, 0px);
+    }
+    60% {
+        transform: translate3d(-3px, 0px, 0px);
+    }
+}
+
+.hero-text span {
+    margin-left: 8px;
+    color: #276CF6;
+    font-size: 64px;
+    line-height: 0.6;
+    font-weight: 700;
+    animation: 3s ease 0s infinite normal none running arrow;
+}
+
+.hero-text span:last-child {
+    margin-left: -16px;
+    animation: 3s ease 0.03s infinite normal none running arrow;
+}
+
+.footer {
+    position: absolute;
+    bottom: 32px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #276CF6;
+}
+
+.footer-mobile {
+    display: none;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.footer-mobile a {
+    text-decoration: none;
+    color: #276CF6;
+}
+
+.storyline {
+    margin: 0 auto;
+}
+
+.features {
+    margin-top: 32px;
+}
+
+.features img {
+    width: 48px;
+    margin-bottom: 16px;
+}
+
+.features h3 {
+    font-weight: 700;
+}
+
+.features p {
+    margin-top: 16px;
+}
+
+#feature1, #feature2, #feature3 {
+    display: none;
+    opacity: 0;
+    transition: ease 0.25s;
+}
+
+#mainwrapper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .column {
+        height: auto;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: block;
+    }
+}
