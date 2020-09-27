@@ -29,39 +29,53 @@
                 </div>
                 <div class="section">
                     <h4>Upozornenie</h4>
-                    <p>Automatické spínanie externých zariadení (siréna, brána,...) je zabezpečované pomocou spínacieho modulu, ktorý si treba zakúpiť.</p>
+                    <p>Automatické spínanie externých zariadení (siréna, brána,...) je zabezpečované pomocou spínacieho
+                        modulu, ktorý si treba zakúpiť.</p>
                     <p>Spínací modul zatiaľ funguje len ako signál/impulz pre existujúci systém spínania zariadení.</p>
                     <p>Momentálne funguje len s Windows PC.</p>
                 </div>
                 <div class="section">
                     <h4>Krok #1 - zapojenie</h4>
-                    <p>Spínací modul pripojte pomocou LAN káblu k lokálnej sieti na ktorej je pripojený aj počítač s
+                    <p>Spínací modul pripojte pomocou Ethernet káblu k lokálnej sieti na ktorej je pripojený aj počítač
+                        s
                         panelom.</p>
                     <p>Pripojte spínacie kontakty na relé.</p>
                     <p>Pripojte napájací USB kábel.</p>
                 </div>
                 <div class="section">
-                    <h4>Krok #2 - nastavenie (Windows PC)</h4>
+                    <h4>Krok #2 - konfigurácia DHCP</h4>
+                    <p>Spínací modul funguje najlepšie, ak má pridelenú vlastnú statickú IP adresu v sieti LAN. Vačšina
+                        routerov ponúka možnosť manuálneho pridelenia (rezervácie) IP adresy konkrétnemu zariadeniu.</p>
+                    <p>Otvorte nastavenia vášho routera (obvykle <a href="http://192.168.0.1/" target="_blank"
+                            rel="noopener noreferrer">http://192.168.0.1/</a> alebo <a href="http://192.168.1.1/"
+                            target="_blank" rel="noopener noreferrer">http://192.168.1.1/</a>).</p>
+                    <p>Prihláste sa pomocou mena a hesla (väčšinou meno/heslo: admin/admin).</p>
+                    <p>Po prihlásení, navigujte do sekcie DHCP/DHCP Server ďalej do Address Reservation/Manual Assignment a pridajte nové pravidlo pre MAC adresu <b>DE-AD-BE-EF-FE-ED</b>. Vyhradená IP adresa musí byť v rovnakej podsieti s LAN IP adresou.</p>
+                </div>
+                <div class="section">
+                    <h4>Krok #3 - nastavenie (Windows PC)</h4>
                     <p>Vo Windowse vyhladajte "Príkazový riadok", spustite ako administrátor/správca, skopírujte
-                        nasledujúci kód a prilepte ho do príkazového riadku.</p>
+                        nasledujúci kód, nahraďte <b>IP_ADDRESS</b> vašou IP adresou z predchádzajúceho kroku a prilepte ho do príkazového riadku.</p>
                     <p>
                     <div style="background-color: #212529; padding: 8px; border-radius: 8px;">
                         <code
-                            style="color: white;">netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=3210 connectaddress=192.168.0.10 connectport=80</code>
+                            style="color: white;">netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=3210 connectaddress=<b>IP_ADDRESS</b> connectport=80</code>
                     </div>
                     </p>
                     <p>Potvrďte <kbd>ENTER</kbd>om.</p>
                 </div>
                 <div class="section">
-                    <h4>Krok #3 - nastavenie panelu</h4>
+                    <h4>Krok #4 - nastavenie panelu</h4>
                     <p>Ak ešte nie ste prihlásený v ovládacom paneli, prosím <a href="https://panel.hasime.sk/login"
                             target="_blank" rel="noopener noreferrer">prihláste sa</a>.
-                    <p>Otvorte nastavenia panelu (v pravo hore ikonka) a v sekcii "Spínanie zariadení" povoľte možnosť "automatického spínania zariadení".</p>
+                    <p>Otvorte nastavenia panelu (v pravo hore ikonka) a v sekcii "Spínanie zariadení" povoľte možnosť
+                        "automatického spínania zariadení".</p>
                     <p>Zmeny uložte.</p>
                 </div>
                 <div class="section">
-                    <h4>Krok #4 - hotovo, automatické spínanie je nastavené</h4>
-                    <p>Ak ste všetko nastavili správne, po vyhlásení poplachu spínací modul automaticky zopne pripojené zariadenia.</p>
+                    <h4>Krok #5 - hotovo, automatické spínanie je nastavené</h4>
+                    <p>Ak ste všetko nastavili správne, po vyhlásení poplachu spínací modul automaticky zopne pripojené
+                        zariadenia.</p>
                     <p>V prípade problémov s nastavením nás prosím kontaktujte.</p>
                 </div>
             </div>
