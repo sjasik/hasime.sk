@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style-zaciname.css">
+
+    <title>HASIME.SK - Spínanie externých zariadení</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" alt="" srcset="">
+                    </a>
+                </div>
+                <div class="hero-text">
+                    <h2>Spínanie externých zariadení</h2>
+                </div>
+                <div class="section">
+                    <h4>Upozornenie</h4>
+                    <p>Automatické spínanie externých zariadení (siréna, brána,...) je zabezpečované pomocou spínacieho modulu, ktorý si treba zakúpiť.</p>
+                    <p>Spínací modul zatiaľ funguje len ako signál/impulz pre existujúci systém spínania zariadení.</p>
+                    <p>Momentálne funguje len s Windows PC.</p>
+                </div>
+                <div class="section">
+                    <h4>Krok #1 - zapojenie</h4>
+                    <p>Spínací modul pripojte pomocou LAN káblu k lokálnej sieti na ktorej je pripojený aj počítač s
+                        panelom.</p>
+                    <p>Pripojte spínacie kontakty na relé.</p>
+                    <p>Pripojte napájací USB kábel.</p>
+                </div>
+                <div class="section">
+                    <h4>Krok #2 - nastavenie (Windows PC)</h4>
+                    <p>Vo Windowse vyhladajte "Príkazový riadok", spustite ako administrátor/správca, skopírujte
+                        nasledujúci kód a prilepte ho do príkazového riadku.</p>
+                    <p>
+                    <div style="background-color: #212529; padding: 8px; border-radius: 8px;">
+                        <code
+                            style="color: white;">netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=3210 connectaddress=192.168.0.10 connectport=80</code>
+                    </div>
+                    </p>
+                    <p>Potvrďte <kbd>ENTER</kbd>om.</p>
+                </div>
+                <div class="section">
+                    <h4>Krok #3 - nastavenie panelu</h4>
+                    <p>Ak ešte nie ste prihlásený v ovládacom paneli, prosím <a href="https://panel.hasime.sk/login"
+                            target="_blank" rel="noopener noreferrer">prihláste sa</a>.
+                    <p>Otvorte nastavenia panelu (v pravo hore ikonka) a v sekcii "Spínanie zariadení" povoľte možnosť "automatického spínania zariadení".</p>
+                    <p>Zmeny uložte.</p>
+                </div>
+                <div class="section">
+                    <h4>Krok #4 - hotovo, automatické spínanie je nastavené</h4>
+                    <p>Ak ste všetko nastavili správne, po vyhlásení poplachu spínací modul automaticky zopne pripojené zariadenia.</p>
+                    <p>V prípade problémov s nastavením nás prosím kontaktujte.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
