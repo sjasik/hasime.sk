@@ -43,22 +43,37 @@
                     <p>Pripojte napájací USB kábel.</p>
                 </div>
                 <div class="section">
-                    <h4>Krok #2 - konfigurácia DHCP</h4>
+                    <h4>Krok #2 - konfigurácia routeru</h4>
                     <p>Spínací modul funguje najlepšie, ak má pridelenú vlastnú statickú IP adresu v sieti LAN. Vačšina
                         routerov ponúka možnosť manuálneho pridelenia (rezervácie) IP adresy konkrétnemu zariadeniu.</p>
                     <p>Otvorte nastavenia vášho routera (obvykle <a href="http://192.168.0.1/" target="_blank"
                             rel="noopener noreferrer">http://192.168.0.1/</a> alebo <a href="http://192.168.1.1/"
-                            target="_blank" rel="noopener noreferrer">http://192.168.1.1/</a>).</p>
+                            target="_blank" rel="noopener noreferrer">http://192.168.1.1/</a>). V prípade že váš router
+                        používa inú adresu, možete ju zistiť pomocou príkazu ipconfig.</p>
+                    <p>
+                    <p>(Môžete preskočiť) Vo Windowse vyhladajte a spustite "Príkazový riadok", skopírujte
+                        nasledujúci kód a prilepte
+                        ho do príkazového riadku.</p>
+                    <div style="background-color: #212529; padding: 8px; border-radius: 8px;">
+                        <code style="color: white;">ipconfig</code>
+                    </div>
+                    </p>
+                    <p>(Môžete preskočiť) Potvrďte <kbd>ENTER</kbd>om.</p>
+                    <p>(Môžete preskočiť) Adresa vášho routera sa nachádza v riadku s textom Default Gateway. Adresu
+                        skopírujte a otvorte v prehliadači.</p>
                     <p>Prihláste sa pomocou mena a hesla (väčšinou meno/heslo: admin/admin).</p>
-                    <p>Po prihlásení, navigujte do sekcie DHCP/DHCP Server ďalej do Address Reservation/Manual Assignment a pridajte nové pravidlo pre MAC adresu <b>DE-AD-BE-EF-FE-ED</b>. Vyhradená IP adresa musí byť v rovnakej podsieti s LAN IP adresou.</p>
+                    <p>Po prihlásení, navigujte do sekcie DHCP/DHCP Server ďalej do Address Reservation/Manual
+                        Assignment a pridajte nové pravidlo pre MAC adresu <b>DE-AD-BE-EF-FE-ED</b>. Vyhradená IP adresa
+                        musí byť v rovnakej podsieti s LAN IP adresou.</p>
                 </div>
                 <div class="section">
                     <h4>Krok #3 - nastavenie (Windows PC)</h4>
-                    <p>Vo Windowse vyhladajte "Príkazový riadok", spustite ako administrátor/správca, skopírujte
-                        nasledujúci kód, nahraďte <b>IP_ADDRESS</b> vašou IP adresou z predchádzajúceho kroku a prilepte ho do príkazového riadku.</p>
+                    <p>Vo Windowse vyhladajte "Príkazový riadok", spustite ako administrátor/správca, v nasledujúcom
+                        kóde nahraďte <b>IP_ADDRESS</b> vašou IP adresou z predchádzajúceho kroku, skopírujte a prilepte
+                        ho do príkazového riadku.</p>
                     <p>
                     <div style="background-color: #212529; padding: 8px; border-radius: 8px;">
-                        <code
+                        <code contenteditable="true"
                             style="color: white;">netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=3210 connectaddress=<b>IP_ADDRESS</b> connectport=80</code>
                     </div>
                     </p>
@@ -92,5 +107,11 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 </body>
+
+<style>
+    [contenteditable] {
+        outline: 0px solid transparent;
+    }
+</style>
 
 </html>
